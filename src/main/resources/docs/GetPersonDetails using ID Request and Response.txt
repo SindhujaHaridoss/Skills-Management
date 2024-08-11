@@ -1,0 +1,100 @@
+curl --location 'GET http://localhost:8080/v1/api/person/getPersonById/10' \
+--header 'accept: */*' \
+--header 'Content-Type: application/json' \
+--header 'Cookie: JSESSIONID=7489EB99D8BA6914DD9033B3B70C9477; JSESSIONID=7489EB99D8BA6914DD9033B3B70C9477'
+
+Response
+{
+    "statusCode": "200",
+    "statusDescription": "Person details retrieved successfully",
+    "statusType": "SUCCESS",
+    "data": {
+        "personId": 10,
+        "firstName": "Fname10",
+        "lastName": "Lname10",
+        "dob": "13-06-0006",
+        "email": null,
+        "departmentId": 4,
+        "personSkills": [
+            {
+                "skill": {
+                    "skillId": 76
+                },
+                "skillLevel": "WORKING",
+                "yearsOfExperience": 3
+            },
+            {
+                "skill": {
+                    "skillId": 54
+                },
+                "skillLevel": "AWARENESS",
+                "yearsOfExperience": 8
+            },
+            {
+                "skill": {
+                    "skillId": 70
+                },
+                "skillLevel": "AWARENESS",
+                "yearsOfExperience": 10
+            },
+            {
+                "skill": {
+                    "skillId": 86
+                },
+                "skillLevel": "EXPERT",
+                "yearsOfExperience": 5
+            },
+            {
+                "skill": {
+                    "skillId": 22
+                },
+                "skillLevel": "AWARENESS",
+                "yearsOfExperience": 7
+            },
+            {
+                "skill": {
+                    "skillId": 92
+                },
+                "skillLevel": "PRACTITIONER",
+                "yearsOfExperience": 5
+            },
+            {
+                "skill": {
+                    "skillId": 66
+                },
+                "skillLevel": "PRACTITIONER",
+                "yearsOfExperience": 5
+            },
+            {
+                "skill": {
+                    "skillId": 74
+                },
+                "skillLevel": "PRACTITIONER",
+                "yearsOfExperience": 5
+            },
+            {
+                "skill": {
+                    "skillId": 39
+                },
+                "skillLevel": "PRACTITIONER",
+                "yearsOfExperience": 4
+            },
+            {
+                "skill": {
+                    "skillId": 100
+                },
+                "skillLevel": "PRACTITIONER",
+                "yearsOfExperience": 10
+            }
+        ]
+    }
+}
+
+ERROR
+
+{
+    "statusCode": "404",
+    "statusDescription": "Person Details unavailable",
+    "statusType": "ERROR",
+    "data": null
+}

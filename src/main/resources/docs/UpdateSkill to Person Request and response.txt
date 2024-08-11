@@ -1,0 +1,99 @@
+curl --location --request PUT 'http://localhost:8080/v1/api/skills/updateSkillToPerson' \
+--header 'accept: */*' \
+--header 'Content-Type: application/json' \
+--header 'Cookie: JSESSIONID=7489EB99D8BA6914DD9033B3B70C9477' \
+--data '{
+  "personId": 12,
+  "firstName": "Sindhuja",
+  "lastName": "H",
+  "dob": "12-12-1987",
+  "departmentId": 0,
+  "personSkills": [
+    {
+      "skill": {
+        "skillId": 15
+      },
+      "skillLevel": "EXPERT",
+      "yearsOfExperience": 10
+    }
+  ]
+}'
+
+
+RESPONSE
+ERROR
+
+{
+    "statusCode": "204",
+    "statusDescription": "Person not found to add skill",
+    "statusType": "ERROR",
+    "data": null
+}
+
+SUCCESS
+{
+    "statusCode": "200",
+    "statusDescription": "skill updated to person record successfully",
+    "statusType": "SUCCESS",
+    "data": {
+        "personId": 12,
+        "firstName": "Sindhuja",
+        "lastName": "Haridoss",
+        "dob": "1987-12-12T00:00:00.000+0000",
+        "email": "xxx@gmail.com",
+        "personSkills": [
+            {
+                "id": 85,
+                "skill": {
+                    "skillId": 15,
+                    "skillName": "Skill 15",
+                    "personSkills": [
+                        {
+                            "id": 46,
+                            "skill": 15,
+                            "skillLevel": "EXPERT",
+                            "yearsOfExperience": 1
+                        },
+                        {
+                            "id": 84,
+                            "skill": 15,
+                            "skillLevel": "EXPERT",
+                            "yearsOfExperience": 10
+                        }
+                    ]
+                },
+                "skillLevel": "EXPERT",
+                "yearsOfExperience": 10
+            },
+            {
+                "id": 83,
+                "skill": {
+                    "skillId": 1,
+                    "skillName": "Skill 1",
+                    "personSkills": [
+                        {
+                            "id": 38,
+                            "skill": 1,
+                            "skillLevel": "WORKING",
+                            "yearsOfExperience": 3
+                        },
+                        {
+                            "id": 82,
+                            "skill": 1,
+                            "skillLevel": "EXPERT",
+                            "yearsOfExperience": 10
+                        },
+                        83
+                    ]
+                },
+                "skillLevel": "EXPERT",
+                "yearsOfExperience": 10
+            },
+            84
+        ],
+        "department": {
+            "id": 1,
+            "name": "Engineering"
+        }
+    }
+}

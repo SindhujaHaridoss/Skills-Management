@@ -1,0 +1,23 @@
+curl --location --globoff --request DELETE 'http://localhost:8080/v1/api/skills/removeSkillFromPerson/{personId}/{skillId}?personId=1&skillId=3' \
+--header 'accept: */*' \
+--header 'Cookie: JSESSIONID=7489EB99D8BA6914DD9033B3B70C9477'
+
+
+RESPONSE
+
+ERROR
+{
+    "statusCode": "404",
+    "statusDescription": "Skill with ID 3 not found in person's skills",
+    "statusType": "ERROR",
+    "data": null
+}
+
+SUCCESS
+
+{
+  "statusCode": "200",
+  "statusDescription": "skill1removed from person record",
+  "statusType": "SUCCESS",
+  "data": null
+}

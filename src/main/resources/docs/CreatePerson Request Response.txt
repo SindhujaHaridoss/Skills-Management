@@ -1,0 +1,75 @@
+POST curl --location 'http://localhost:8080/v1/api/person/createNewPerson' \
+--header 'accept: */*' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: ••••••' \
+--header 'Cookie: JSESSIONID=7489EB99D8BA6914DD9033B3B70C9477' \
+--data-raw '{
+  "personId": 0,
+  "firstName": "Sindhuja",
+  "lastName": "Haridoss",
+  "dob": "12-12-1987",
+  "email": "xxx@gmail.com",
+  "departmentId": 1,
+  "personSkills": [
+    {
+      "skill": {
+        "skillId": 1
+      },
+      "skillLevel": "EXPERT",
+      "yearsOfExperience": 10
+    }
+  ]
+}'
+
+ERROR:
+
+{
+    "statusCode": "409",
+    "statusDescription": "Person Record already exists in the system. Please try to update the information",
+    "statusType": "ERROR",
+    "data": null
+}
+
+SUCCESS:
+
+{
+    "statusCode": "200",
+    "statusDescription": "Person details created successfully",
+    "statusType": "SUCCESS",
+    "data": {
+        "personId": 12,
+        "firstName": "Sindhuja",
+        "lastName": "Haridoss",
+        "dob": "1987-12-12T00:00:00.000+0000",
+        "email": "xxx@gmail.com",
+        "personSkills": [
+            {
+                "id": 83,
+                "skill": {
+                    "skillId": 1,
+                    "skillName": "Skill 1",
+                    "personSkills": [
+                        {
+                            "id": 38,
+                            "skill": 1,
+                            "skillLevel": "WORKING",
+                            "yearsOfExperience": 3
+                        },
+                        {
+                            "id": 82,
+                            "skill": 1,
+                            "skillLevel": "EXPERT",
+                            "yearsOfExperience": 10
+                        }
+                    ]
+                },
+                "skillLevel": "EXPERT",
+                "yearsOfExperience": 10
+            }
+        ],
+        "department": {
+            "id": 1,
+            "name": "Engineering"
+        }
+    }
+}

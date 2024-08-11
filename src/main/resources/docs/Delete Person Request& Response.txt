@@ -1,0 +1,22 @@
+curl --location --request DELETE 'http://localhost:8080/v1/api/person/deletePerson/1' \
+--header 'accept: */*' \
+--header 'Cookie: JSESSIONID=7489EB99D8BA6914DD9033B3B70C9477'
+
+RESPONSE
+
+ERROR
+{
+    "statusCode": "404",
+    "statusDescription": "Person record not found for the personId",
+    "statusType": "ERROR",
+    "data": null
+}
+
+SUCCESS
+
+{
+    "statusCode": "200",
+    "statusDescription": "Person record deleted successfully",
+    "statusType": "SUCCESS",
+    "data": null
+}
